@@ -1,7 +1,41 @@
+server:
+  port: 18283
+#  tomcat:
+#    max-http-header-size: 10240     #单位：字节
+
 spring:
+  http:
+      encoding:
+        charset: UTF-8
+        enabled: true
   datasource:
-      url: jdbc:mysql://localhost:3306/example?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      url: jdbc:mysql://localhost:3306/springboot-shiro-demo?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
       username: root
       password: root
+  activemq:
+      broker-url:
+      user:
+      password:
+
+  redis:
+    host: 192.168.18.134
+    port: 6379
+    password: ilove139
+    jedis:
+          pool:
+            max-active: 8
+            min-idle: 0
+            max-idle: 8
+            #max-wait: -1
 mybatis:
    mapperLocations: classpath:/mapper/*.xml
+
+memcached:
+      servers: localhost:11211
+
+elasticsearch:
+      ip: 127.0.0.1
+      port: 9300
+      pool: 5
+      cluster:
+            name: elasticsearch

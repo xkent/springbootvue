@@ -11,7 +11,7 @@
     <property name="CONSOLE_LOG_PATTERN"
               value="${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
 
-    <contextName>heeexy</contextName>
+    <contextName>bootme</contextName>
 
     <!--定义日志文件的存储地址 -->
     <property name="LOG_HOME" value="logs"/>
@@ -64,6 +64,6 @@
     <logger name="org.springframework" level="WARN"/>
     <logger name="org.apache" level="WARN"/>
     <!--如果需要打印SQL,可以把下面的级别设置为DEBUG -->
-    <logger name="com.heeexy.example.dao" level="DEBUG"/>
+    <logger name="com.bootme.app" level="DEBUG"/>
 
 </configuration>
